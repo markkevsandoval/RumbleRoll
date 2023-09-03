@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover 'Rumble Roll,' the thrilling online dice game! Learn the rules, craft your strategy, and experience endless fun with friends. Join the 'Rumble Roll' adventure today!"
+    />
+    <title>RumbleRoll</title>
+    <link rel="shortcut icon" href="/assets/svg/logo.svg" type="image/x-icon" />
+    <link href="/src/css/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-bangers">
+    <!-- BACKGROUND IMAGE -->
+    <div class="fixed z-[-1] h-full w-full bg-dark bg-cover bg-center"></div>
+
+    <div class="grid h-screen place-items-center">
+      <div class="border_tb relative flex h-full w-full flex-col sm:flex-row md:h-4/5 md:w-3/4">
+        <!-- BUTTONS -->
+        <div class="button_wrapper">
+          <button class="button_dark" id="new_game">
+            New Game
+            <img src="/assets/svg/new-game.svg" alt="New Game" width="20" height="20" />
+          </button>
+          <button class="button_dark" id="how_to_play">
+            How to play
+            <img src="/assets/svg/how-to-play.svg" alt="How to play" width="20" height="20" />
+          </button>
+        </div>
+        <div
+          class="grid h-full w-full place-items-center bg-black transition-all duration-500 ease-in-out"
+          id="player_one"
+        >
+          <div class="self-end text-center">
+            <p class="text-3xl text-white md:text-6xl" id="player_0_name">Player One</p>
+            <p class="text-6xl text-white md:text-9xl" id="player_0_score">0</p>
+          </div>
+          <div class="self-start rounded bg-white p-3 text-center md:p-6">
+            <p class="text-base md:text-3xl">Current Score</p>
+            <p class="text-3xl" id="current_score_0">0</p>
+          </div>
+        </div>
+
+        <!-- DICE -->
+        <img
+          class="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 transform animate-pulse transition-all duration-500 ease-in-out"
+          src="/assets/svg/dice-1.svg"
+          alt="Dice Image"
+          id="dice_image"
+        />
+
+        <div
+          class="grid h-full w-full place-items-center bg-black bg-opacity-70 transition-all duration-500 ease-in-out"
+          id="player_two"
+        >
+          <div class="self-end text-center">
+            <p class="text-3xl text-white md:text-6xl" id="player_1_name">Player Two</p>
+            <p class="text-6xl text-white md:text-9xl" id="player_1_score">0</p>
+          </div>
+          <div class="self-start rounded bg-white p-3 text-center md:p-6">
+            <p class="text-base md:text-3xl">Current Score</p>
+            <p class="text-3xl" id="current_score_1">0</p>
+          </div>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="button_wrapper bottom-0">
+          <button class="button_dark" id="hold_score">
+            Hold Score
+            <img src="/assets/svg/hold.svg" alt="Hold Score" width="20" height="20" />
+          </button>
+          <button class="button_dark" id="roll_dice">
+            Roll Dice
+            <img src="/assets/svg/roll-dice.svg" alt="Roll Dice" width="20" height="20" />
+          </button>
+        </div>
+      </div>
+
+      <!-- MODAL WINNER-->
+      <div class="absolute z-20 grid place-items-center">
+        <div class="hidden" id="winner_modal">
+          <div class="relative grid h-64 w-80 place-items-center rounded bg-white">
+            <p class="animate-bounce text-4xl text-black md:text-5xl" id="player_winner"></p>
+            <img class="absolute right-3 top-3 cursor-pointer" src="/assets/svg/close.svg" alt="Close" id="closed_x" />
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL HOW TO PLAY -->
+      <div class="absolute z-20 grid place-items-center">
+        <div class="hidden" id="how_to_play_modal">
+          <div
+            class="relative h-72 w-80 overflow-y-scroll rounded bg-white p-3 md:h-96 md:w-96 md:p-6 lg:h-full lg:w-full"
+          >
+            <img
+              class="absolute right-3 top-3 cursor-pointer md:right-6 md:top-6"
+              src="/assets/svg/close.svg"
+              alt="Close"
+              id="closed_x"
+            />
+            <p class="text-2xl text-black lg:text-3xl">How to Play - RumbleRoll</p>
+            <p class="mt-2 text-sm lg:text-base">
+              <b class="text-base tracking-widest lg:text-lg">Objective:</b>
+              Be the first player to reach a score of 100 to win the game.
+            </p>
+            <p class="mt-2 text-base lg:text-lg"><b class="tracking-widest">Gameplay:</b></p>
+            <ol class="list-inside list-decimal">
+              <li class="mt-2 lg:text-lg">
+                <b class="tracking-widest">Starting the Game:</b>
+                <p class="inline-block text-sm lg:text-base">
+                  The game begins with Player 1 Each player takes turns to roll a single six-sided dice.
+                </p>
+              </li>
+              <li class="mt-2 lg:text-lg">
+                <b class="tracking-widest">Roll Dice:</b>
+                <ul class="list-inside list-disc text-sm lg:text-base">
+                  <li>Click the "Roll Dice" button to roll the dice.</li>
+                  <li>
+                    If the dice shows a 1, your turn ends immediately, and your current score for that turn becomes
+                    zero. It's now the other player's turn.
+                  </li>
+                  <li>
+                    If the dice shows any other number (2 through 6), that number is added to your current turn's score.
+                  </li>
+                </ul>
+              </li>
+              <li class="mt-2 lg:text-lg">
+                <b class="tracking-widest">Hold Score:</b>
+                <ul class="list-inside list-disc text-sm lg:text-base">
+                  <li>At any point during your turn, you can choose to "Hold Score" by clicking the button.</li>
+                  <li>When you hold your score, the total score for your turn is added to your overall score.</li>
+                  <li>
+                    <b>IMPORTANT:</b>
+                    You can only choose to "Hold Score" if your current score is greater than 0. If your current score
+                    is 0, you can't switch to the other player.
+                  </li>
+                  <li>It's now the other player's turn.</li>
+                </ul>
+              </li>
+              <li class="mt-2 lg:text-lg">
+                <b class="tracking-widest">Winning the Game:</b>
+                <ul class="list-inside list-disc text-sm lg:text-base">
+                  <li>The game continues with players taking turns, rolling the dice, and holding scores.</li>
+                  <li>The first player to reach or exceed a total score of 100 wins the game immediately.</li>
+                </ul>
+              </li>
+              <li class="mt-2 lg:text-lg">
+                <b class="tracking-widest">Switching Players:</b>
+                <ul class="list-inside list-disc text-sm lg:text-base">
+                  <li>Players take alternate turns - Player 1, then Player 2, and so on.</li>
+                  <li>
+                    When a player rolls a 1 or chooses to hold their score, it automatically becomes the other player's
+                    turn.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+            <p class="mt-2 text-sm lg:text-base">
+              <b class="tracking-widest lg:text-lg">Winning Tip:</b>
+              Be strategic with your decisions to roll or hold to maximize your score and reach 100 points before your
+              opponent.
+            </p>
+            <p class="mt-2 lg:text-lg">Created by: Mark Kevin Sandoval</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OVERLAY -->
+      <div class="absolute left-0 top-0 z-10 hidden h-screen w-screen bg-black opacity-60 blur-sm" id="overlay"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

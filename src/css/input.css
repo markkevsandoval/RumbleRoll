@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .border_tb {
+    @apply border-white md:rounded md:border-b-2 md:border-t-2;
+  }
+  .button_wrapper {
+    @apply absolute flex w-full items-center justify-between p-3 md:p-6;
+  }
+  .button_dark {
+    @apply flex items-center gap-2 rounded bg-white p-3 text-black outline-none active:scale-[0.9];
+  }
+  .button_icon {
+    @apply h-5 w-5 fill-none stroke-black stroke-2;
+  }
+}
+
+* {
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
