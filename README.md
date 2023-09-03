@@ -21,7 +21,7 @@ Welcome to Rumble Roll, a thrilling online dice game where strategy and luck col
 - Special thanks to [Google Fonts](https://fonts.google.com) for providing free fonts used in this game.
 - Inspired by classic dice games for endless entertainment.
 
-## Contact Us
+## Contact Me
 
 If you have any questions, feedback, or issues, feel free to contact me at [sandoval.markkevin.j@gmail.com](mailto:sandoval.markkevin.j@gmail.com).
 
