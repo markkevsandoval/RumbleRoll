@@ -8,7 +8,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        dark: "url('/assets/svg/background-dark.svg')",
+        dark: "url('./assets/svg/background-dark.svg')",
       },
     },
   },
