@@ -8,7 +8,7 @@
       content="Discover 'Rumble Roll,' the thrilling online dice game! Learn the rules, craft your strategy, and experience endless fun with friends. Join the 'Rumble Roll' adventure today!"
     />
     <title>RumbleRoll</title>
-    <link rel="shortcut icon" href="../assets/svg/logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/svg/logo.svg" type="image/x-icon" />
     <link href="./css/output.css" rel="stylesheet" />
   </head>
   <body class="font-bangers">
@@ -21,11 +21,11 @@
         <div class="button_wrapper">
           <button class="button_dark" id="new_game">
             New Game
-            <img src="../assets/svg/new-game.svg" alt="New Game" width="20" height="20" />
+            <img src="/assets/svg/new-game.svg" alt="New Game" width="20" height="20" />
           </button>
           <button class="button_dark" id="how_to_play">
             How to play
-            <img src="../assets/svg/how-to-play.svg" alt="How to play" width="20" height="20" />
+            <img src="/assets/svg/how-to-play.svg" alt="How to play" width="20" height="20" />
           </button>
         </div>
         <div
@@ -45,7 +45,7 @@
         <!-- DICE -->
         <img
           class="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 transform animate-pulse transition-all duration-500 ease-in-out"
-          src="../assets/svg/dice-1.svg"
+          src="/assets/svg/dice-1.svg"
           alt="Dice Image"
           id="dice_image"
         />
@@ -68,11 +68,11 @@
         <div class="button_wrapper bottom-0">
           <button class="button_dark" id="hold_score">
             Hold Score
-            <img src="../assets/svg/hold.svg" alt="Hold Score" width="20" height="20" />
+            <img src="/assets/svg/hold.svg" alt="Hold Score" width="20" height="20" />
           </button>
           <button class="button_dark" id="roll_dice">
             Roll Dice
-            <img src="../assets/svg/roll-dice.svg" alt="Roll Dice" width="20" height="20" />
+            <img src="/assets/svg/roll-dice.svg" alt="Roll Dice" width="20" height="20" />
           </button>
         </div>
       </div>
@@ -82,7 +82,7 @@
         <div class="hidden" id="winner_modal">
           <div class="relative grid h-64 w-80 place-items-center rounded bg-white">
             <p class="animate-bounce text-4xl text-black md:text-5xl" id="player_winner"></p>
-            <img class="absolute right-3 top-3 cursor-pointer" src="../assets/svg/close.svg" alt="Close" id="closed_x" />
+            <img class="absolute right-3 top-3 cursor-pointer" src="/assets/svg/close.svg" alt="Close" id="closed_x" />
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
           >
             <img
               class="absolute right-3 top-3 cursor-pointer md:right-6 md:top-6"
-              src="../assets/svg/close.svg"
+              src="/assets/svg/close.svg"
               alt="Close"
               id="closed_x"
             />
@@ -169,6 +169,6 @@
       <!-- OVERLAY -->
       <div class="absolute left-0 top-0 z-10 hidden h-screen w-screen bg-black opacity-60 blur-sm" id="overlay"></div>
     </div>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

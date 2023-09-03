@@ -56,7 +56,7 @@ rollDice.addEventListener("click", () => {
   if (playerPlaying) {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     diceImage.classList.remove("hidden");
-    diceImage.src = `../assets/svg/dice-${randomNumber}.svg`;
+    diceImage.src = `/assets/svg/dice-${randomNumber}.svg`;
 
     if (randomNumber !== 1) {
       currentScoreValue += randomNumber;

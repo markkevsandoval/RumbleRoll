@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  content: ["src/*"],
+  content: ["*"],
   theme: {
     fontFamily: {
       bangers: ["Bangers", "cursive"],
     },
     extend: {
       backgroundImage: {
-        dark: "url('./assets/svg/background-dark.svg')",
+        dark: "url('/assets/svg/background-dark.svg')",
       },
     },
   },
