@@ -23,6 +23,6 @@ Welcome to Rumble Roll, a thrilling online dice game where strategy and luck col
 
 ## Contact Us
 
-If you have any questions, feedback, or issues, feel free to contact us at [sandoval.markkevin.j@gmail.com](mailto:sandoval.markkevin.j@gmail.com).
+If you have any questions, feedback, or issues, feel free to contact me at [sandoval.markkevin.j@gmail.com](mailto:sandoval.markkevin.j@gmail.com).
 
 Happy rolling and good luck!
